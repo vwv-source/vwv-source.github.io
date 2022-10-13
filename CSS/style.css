@@ -1,0 +1,161 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: hsl(0, 0%, 93%);
+    margin: 0;
+}
+
+.topbar{
+    color: black;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: rgba(0, 0, 0, 0.178) 0px 0px 20px;
+    overflow: hidden;
+}
+
+.profileicon{
+    background-image: url('https://i.imgur.com/J4xFQ5N.png');
+    background-size: cover;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.555);
+    width: 45px;
+    height: 45px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 25px;
+    border-radius: 30px;
+}
+
+.profilename{
+    position: relative;
+    font-size: 20px;
+    left: 10px;
+    bottom: 8px;
+    font-weight: 600;
+}
+
+.profiledev{
+    position: relative;
+    bottom: 28px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.521);
+    font-weight: 700;
+    left: 80px;
+}
+
+.rightbuttonscont{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+
+.rightbutton{
+    font-family: 'Segoe UI';
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 97%);
+    color: gray;
+    border: 2px hsl(0, 0%, 90%) solid;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+    margin-right: 8px;
+    position: relative;
+    right: 5px;
+}
+
+.rightbutton:hover, .rightbutton[selected=" "]{
+    color: black;
+    border-radius: 20px;
+    border: 2px hsl(0, 0%, 60%) solid;
+    transform: scale(1.1,1.1);
+    box-shadow: rgba(0, 0, 0, 0.219) 0px 0px 5px;
+}
+
+.socialicon{
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    bottom: 2px;
+    filter: invert(0.2);
+    margin-left: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.pagecontainer{
+/*     background-image: url('https://i.imgur.com/PF4E5bH.png');
+    background-size: cover; */
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    height: calc(100vh - 0px);
+    width: 100%;
+}
+
+.backgroundimg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: brightness(600%) blur(30px) ;
+}
+
+#discordicon.socialicon:hover{
+    transition: .5s cubic-bezier(.17,.67,.18,1.28);
+    transform: rotate(360deg);
+}
+
+.showofftext{
+    user-select: none;
+    font-family: 'Segoe UI', monospace;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-90%);
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    margin-left: 40px;
+    z-index: 1;
+}
+
+ve{
+    color: rgb(169, 94, 253);
+    text-shadow: 0px 2px 10px rgb(169, 94, 253);
+    transition: .2s;
+    animation: showoffanimation 5s infinite alternate linear;
+    transform: rotate(180deg);
+}
+
+@keyframes showoffanimation {
+    0%   {
+        color: rgb(255, 0, 170);
+        text-shadow: 0px 2px 10px rgb(255, 99, 195);
+    }
+    33%{
+        color: rgb(94, 123, 253);
+        text-shadow: 0px 2px 10px rgb(94, 150, 253);
+    }
+
+    66%{
+        color: rgb(26, 204, 136);
+        text-shadow: 0px 2px 10px rgb(72, 184, 141);
+    }
+    100% {
+        color: rgb(255, 104, 34);
+        text-shadow: 0px 2px 10px rgb(255, 133, 95);
+    }
+  }
