@@ -1,0 +1,332 @@
+/*
+This CSS file is a complete mess ATM 
+
+TODO:
+-----
+Organize and separate this into multiple files :sob:
+
+*/
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(20, 20, 20);
+}
+
+.userBackground{
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+
+.userBackgroundImage{
+    background: url(https://s4.anilist.co/file/anilistcdn/user/banner/b6027143-jYInpXDvP5WJ.jpg);
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
+.userPfpAndUser{
+    position: absolute;
+    bottom: -5px;
+    left: 150px;
+}
+
+.userUsername{
+    display: inline-block;
+    color:white;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 25px;
+    left: 20px;
+}
+
+.userProfilePicture{
+    display: inline-block;
+    width:160px;
+    height:160px;
+    background-color: greenyellow;
+    background: url(https://s4.anilist.co/file/anilistcdn/user/avatar/large/b6027143-v53wZ30rBVHs.png);
+    background-size: cover;
+}
+
+.userButtons{
+    position: relative;
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    height: 45px;
+}
+
+.userButtons .buttonContainer{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+
+.userButtons p{
+    float:left;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: rgb(163, 163, 163);
+    margin: 0px 20px 0px 20px;
+    transition: 0.3s;
+}
+
+.userButtons p[selected="true"]{
+    cursor:pointer;
+    color: pink;
+}
+
+.userButtons p:hover{
+    cursor:pointer;
+    color: pink;
+}
+
+.leftContainer{
+    float: left;
+    width: 35%;
+    height: auto;
+    position: absolute;
+    left: 10%;
+}
+
+.rightContainer{
+    position: absolute;
+    right: 10%;
+    width: 45%;
+    height: auto;
+}
+
+.userBio{
+    border-radius: 3px;
+    margin: 30px 0px 30px 0px;
+    background-color: rgb(32, 32, 32);
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    padding: 10px 0px 10px 7px;
+}
+
+.userBio p{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 10px;
+    color: gainsboro;
+}
+
+.userStats{
+    border-radius: 3px;
+    margin: 30px 0px 30px 0px;
+    background-color: rgb(32, 32, 32);
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    overflow: hidden;
+}
+
+.statsContainer .stat{
+    margin: 15px 0px 15px 0px;
+    display: inline-block;
+    text-align: center;
+    width: 32.5%;
+}
+
+.statsContainer .stat p{
+    font-family: sans-serif;
+    color: gainsboro;
+    padding: 0;
+    margin: 0;
+}
+
+.statsContainer .stat p:first-child{
+    color: pink;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.statsContainer .stat p:last-child{
+    color: rgb(163, 163, 163);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.userStats .bottomArea{
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    height: 45px;
+}
+
+.userStats .bottomArea .progressBar{
+    background-color: pink;
+    width: 80%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.userStats .bottomArea .progressBarBackground{
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    background-color: black;
+}
+
+.userStats .bottomArea p{
+    font-size: 11px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: gainsboro;
+    display: inline-block;
+    width: 32.5%;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+}
+
+.userInfoSection{
+    margin: 30px 0px 30px 0px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    padding: 0px 0px 0px 0px;
+}
+
+.userInfoSection p{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0px 0px 10px 15px;
+    padding: 0;
+    color: gray;
+}
+
+
+.userInfoSection .container{
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+    border-radius: 3px;
+    padding: 10px 0px 10px 0px;
+    box-sizing:border-box;
+    max-width: 430px;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.userInfoSection #favs.container{
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}   
+
+.userInfoSection .favCard{
+    border-radius: 3px;
+    margin: 6px;
+    width: 85px;
+    height: 115px;
+    transition: 0.2s;
+}
+
+.userInfoSection .favCard:hover{
+    cursor: pointer;
+    transform: scale(1.05,1.05);
+}
+
+/* Genre Overview stuff */
+#genreOverview.container{
+    height: 80px;
+}
+
+#genreOverview.container .bottomProgressBars{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#genreOverviewProgessBars > *{
+    float: left;
+    height: 10px;
+}
+
+.genreCardContainer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.genreCard p{
+    padding: 0;
+    margin: 0;
+    color: gainsboro;
+    white-space: nowrap;
+}
+
+.genreCard{
+    display: inline-block;
+    padding: 5px 11px 5px 11px;
+    border-radius: 3px;
+    margin: 10px 2% 10px 2%;
+}
+
+@media (max-width: 1000px) {
+    .userBackground{
+        height:250px;
+    }
+    .userPfpAndUser{
+        left: 30px;
+    }
+
+
+
+    .userButtons{
+        overflow-x: scroll;
+        width: auto;
+    }
+    .userButtons .buttonContainer{
+        display: flex;
+        justify-content: center;
+        left: unset;
+        transform: translate(0, -50%);  
+        width: 550px;
+    }
+    .userButtons p{
+        float: unset;
+        display: inline-block;
+    }
+
+
+    .leftContainer{
+        float: unset;
+        width: 100%;
+        position: unset;
+    }
+    .rightContainer{
+        position: unset;
+        width: 100%;
+    }
+
+
+    .userInfoSection:has(#genreOverview){
+        display: none;
+    }
+}
